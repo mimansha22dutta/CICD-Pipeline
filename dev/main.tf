@@ -1,12 +1,10 @@
-module "rg" {
-  source = "../modules/azurerm_resource_group"
-  rg_name     = "resource-group-we-env"
-  rg_location = "West Europe"
+resource "azurerm_resource_group" "rg" {
+  name     = "resource-group-we-env"
+  location = "West Europe"
 }
 
 # second resource group for testing purposes
-module "rg2" {
-  source = "../modules/azurerm_resource_group"
-  rg_name     = "resource-group-ci-env"
-  rg_location = "Central India"
+resource "azurerm_resource_group" "rg2" {
+  name     = "resource-group-ci-env"
+  location = "Central India"
 }
